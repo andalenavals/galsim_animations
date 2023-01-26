@@ -81,7 +81,7 @@ def linregw(x,y,w, sigma_shape=0.0):
         #sigma = sigma_shape * np.sqrt(1.0/np.clip(w, 1e-18, 1e18))# if w means selection
         sigma = np.sqrt(sigma_shape**2 + 1.0/np.clip(w, 1e-18, 1e18))
 
-        absolute_sigma=True#False
+        absolute_sigma=False
 
         def f(x, a, b): return a * x + b
 
